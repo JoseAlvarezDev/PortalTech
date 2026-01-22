@@ -1,8 +1,5 @@
-# Exclude local binaries from manual publish
+# Exclude only the generic local binary to avoid accidental manual publish bloat
 bin/portal-tech-cli
-bin/portal-tech-cli-macos
-bin/portal-tech-cli-linux
-bin/portal-tech-cli-win.exe
 
 # Exclude potential logs or OS files
 *.log
