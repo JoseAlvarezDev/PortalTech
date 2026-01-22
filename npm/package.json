@@ -1,6 +1,6 @@
 {
-    "name": "portal-tech",
-    "version": "1.0.4",
+    "name": "portal-tech-cli",
+    "version": "1.0.5",
     "description": "Secure tunneling tool for local development",
     "main": "index.js",
     "bin": {
