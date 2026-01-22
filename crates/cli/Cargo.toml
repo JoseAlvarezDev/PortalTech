@@ -1,0 +1,22 @@
+[package]
+name = "cli"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Jose Alvarez Dev"]
+repository = "https://github.com/josealvarezdev/portal-tech"
+
+[dependencies]
+shared = { path = "../shared" }
+tokio.workspace = true
+tokio-tungstenite.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+futures-util.workspace = true
+clap = { version = "4.5.4", features = ["derive"] }
+ratatui = "0.26.1"
+crossterm = "0.27.0"
+reqwest = { version = "0.12.2", features = ["json"] }
+http = "1.1.0"
+base64 = "0.22.0"

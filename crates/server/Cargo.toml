@@ -1,0 +1,22 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Jose Alvarez Dev"]
+repository = "https://github.com/josealvarezdev/portal-tech"
+
+[dependencies]
+shared = { path = "../shared" }
+tokio.workspace = true
+tokio-tungstenite.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+futures-util.workspace = true
+axum = { version = "0.7.5", features = ["ws"] }
+tower-http = { version = "0.5.2", features = ["full"] }
+nanoid.workspace = true
+log.workspace = true
+env_logger.workspace = true
+base64 = "0.22.0"

@@ -1,0 +1,17 @@
+# Rust build artifacts
+/target
+npm/bin/portal-tech-cli*
+
+# IDEs and OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log

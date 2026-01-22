@@ -1,0 +1,21 @@
+{
+    "name": "portal-tech",
+    "version": "1.0.0",
+    "description": "Secure tunneling tool for local development",
+    "main": "index.js",
+    "bin": {
+        "portaltech": "bin/portaltech"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "tunnel",
+        "proxy",
+        "rust",
+        "cli",
+        "development"
+    ],
+    "author": "",
+    "license": "MIT"
+}
