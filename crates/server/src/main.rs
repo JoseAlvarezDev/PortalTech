@@ -20,7 +20,10 @@ struct AppState {
 }
 
 const MAX_BODY_SIZE: usize = 5 * 1024 * 1024; // 5MB
-const AUTH_TOKEN: &str = "portal-secret-123"; // In a real app, this would be in env
+
+fn get_auth_token() -> String {
+    std::env::var("PORTAL_AUTH_TOKEN").unwrap_or_else(|_| "portal-secret-123".to_string())
+}
 
 #[tokio::main]
 async fn main() {
@@ -49,7 +52,7 @@ async fn ws_handler(
     let auth_header = headers.get("X-Portal-Auth")
         .and_then(|h| h.to_str().ok());
 
-    if auth_header != Some(AUTH_TOKEN) {
+    if auth_header != Some(&get_auth_token()) {
         log::warn!("Unauthorized WebSocket connection attempt");
         return (axum::http::StatusCode::UNAUTHORIZED, "Unauthorized").into_response();
     }

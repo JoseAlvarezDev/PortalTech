@@ -27,7 +27,7 @@ struct Args {
     #[arg(short, long, default_value = "ws://127.0.0.1:3000/ws")]
     relay: String,
 
-    #[arg(long, default_value = "portal-secret-123")]
+    #[arg(long, env = "PORTAL_AUTH_TOKEN", default_value = "portal-secret-123")]
     token: String,
 
     #[arg(long)]

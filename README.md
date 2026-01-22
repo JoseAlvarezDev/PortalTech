@@ -50,6 +50,31 @@ cargo run -p server
 cargo run -p cli -- --port 8000
 ```
 
+## Security & Production
+
+### Environment Variables
+For production deployments, never rely on default tokens. Use the `PORTAL_AUTH_TOKEN` environment variable on both the server and the CLI:
+
+```bash
+# Server
+export PORTAL_AUTH_TOKEN="your-secure-random-token"
+./portal-tech-server
+
+# CLI (via env)
+export PORTAL_AUTH_TOKEN="your-secure-random-token"
+portaltech --port 8000
+```
+
+### HTTPS / SSL
+The Relay Server is designed to run behind a reverse proxy (like Nginx, Caddy, or a Cloud Load Balancer) in production. This handles SSL termination and ensures all traffic is encrypted via HTTPS/WSS.
+
+**Example Caddyfile:**
+```text
+portal.yourdomain.com {
+    reverse_proxy localhost:3000
+}
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
