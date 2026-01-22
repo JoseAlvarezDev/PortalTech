@@ -43,6 +43,7 @@ struct App {
 
 #[tokio::main]
 async fn main() -> Result<()> {
+    dotenvy::dotenv().ok();
     let args = Args::parse();
     
     // UI Setup

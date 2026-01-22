@@ -17,6 +17,7 @@ futures-util.workspace = true
 axum = { version = "0.7.5", features = ["ws"] }
 tower-http = { version = "0.5.2", features = ["full"] }
 nanoid.workspace = true
+dotenvy.workspace = true
 log.workspace = true
 env_logger.workspace = true
 base64 = "0.22.0"
